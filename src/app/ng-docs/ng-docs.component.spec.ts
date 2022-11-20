@@ -8,9 +8,8 @@ describe('NgDocsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NgDocsComponent ]
-    })
-    .compileComponents();
+      declarations: [NgDocsComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(NgDocsComponent);
     component = fixture.componentInstance;
@@ -19,5 +18,11 @@ describe('NgDocsComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it(`should have as title 'app'`, () => {
+    const fixture = TestBed.createComponent(NgDocsComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toEqual('app');
   });
 });
